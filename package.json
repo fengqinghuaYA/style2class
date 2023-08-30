@@ -1,6 +1,6 @@
 {
   "name": "@mf/style2class",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "将组件中的styleName转换为className",
   "main": "./lib/index.js",
   "scripts": {
@@ -14,6 +14,7 @@
     "fs-extra": "^11.1.1",
     "jscodeshift": "^0.15.0",
     "lodash": "^4.17.21",
+    "prettier": "2.2.1",
     "yargs": "^17.7.2"
   },
   "bin": {
