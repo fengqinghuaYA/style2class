@@ -1,6 +1,6 @@
 {
   "name": "@mf/style2class",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "将组件中的styleName转换为className",
   "main": "./lib/index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "fast-glob": "^3.3.1",
     "fs-extra": "^11.1.1",
     "jscodeshift": "^0.15.0",
