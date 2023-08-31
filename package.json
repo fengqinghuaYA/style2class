@@ -1,6 +1,6 @@
 {
   "name": "@mf/style2class",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "将组件中的styleName转换为className",
   "main": "./lib/index.js",
   "scripts": {
