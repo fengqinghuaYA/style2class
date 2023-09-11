@@ -1,10 +1,11 @@
 {
   "name": "@mf/style2class",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "将组件中的styleName转换为className",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test/test.js",
+    "test:rm": "node test/rm.js",
     "jsc": "node src/index.js"
   },
   "author": "",

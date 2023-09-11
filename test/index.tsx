@@ -8,15 +8,7 @@ let AverageScoreChart = (_props: IProps) => {
 
   //组件Effect
 
-  return (
-    <div
-      styleName={classNames(style["container"], {
-        [style["changed"]]: changed,
-      })}
-    >
-      {text}
-    </div>
-  );
+  return <div className={`${style.container} ${style["blue-aaa"]}`}>sss</div>;
 };
 
 //props类型定义
