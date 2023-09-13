@@ -6,7 +6,8 @@
 yarn add @mf/style2class 
 
 ## 配置
-/ package.json
+package.json
+
 {
 
     "scripts":{
