@@ -15,25 +15,23 @@ let AverageScoreChart = (_props: IProps) => {
     return (
         <div>
             <div styleName={`dddd-${true && 'active'}`}></div>
-            <div styleName={true && 'active'}></div>
-            <div styleName={true ? cls('content', `${true && cls('content')}`) : ''}></div>
-            <div styleName="content"> </div>
-            <div styleName="content blue"> </div>
+            <div className={true && style.active}></div>
+            <div className={true ? cls(style.content, `${true && cls(style.content)}`) : ''}></div>
+            <div className={style.content}> </div>
+            <div className={`${style.content} ${style.blue}`}> </div>
             <div styleName={classNames}></div>
             <div
-                styleName={cls(
-                    'content content-1',
-                    true && 'content content-2',
+                className={cls(
+                    `${style.content} ${style['content-1']}`,
+                    true && `${style.content} ${style['content-2']}`,
                     {
-                        disabled: true,
-                        ['blue-1']: true,
+                        [style.disabled]: true,
+                        [style['blue-1']]: true,
                     },
-                    ['white', false && 'red', true ? 'white' : 'red']
+                    [style.white, false && style.red, true ? style.white : style.red]
                 )}
             ></div>
-
-            <div styleName={cls('aa')}></div>
-
+            <div className={cls(style.aa)}></div>
             <div className="anana"></div>
         </div>
     );
