@@ -6,8 +6,17 @@
 yarn add @mf/style2class 
 
 ## 配置
-package.json
+```js
+/**
+ * @param {string[]} entry- 入口文件 详见：https://www.npmjs.com/package/fast-glob
+ * @param {boolean} computed - 是否以style['XXX']
+ * @param {string[]} computedEntry- 将 style['XXX'] 转换为 style.XXX 的入口文件;
+ * @param {string | (filePath:string)=>string} styleObjectName- style 对象的名称
+ * @param {string[]} cssProcessors- 支持的预编译语言 'css' | 'less' | 'scss' | 'sass'
+ * @param {string} prettierConfig- prettier 配置文件路径，用于格式化代码
+ */
 
+// package.json 
 {
 
     "scripts":{
@@ -17,11 +26,20 @@ package.json
     }
     ...
     "style2class":{
-        entry:["client/components/common/**/*.tsx" //  styleName 转 className；配置规则参见 https://github.com/mrmlnc/fast-glob]
-        computedEntry:["client/components/common/**/*.tsx" // 配置规则参见 https://github.com/mrmlnc/fast-glob],
-        computed:true // 是否以style['XXX'] 取值
+       "entry": []
+       ....
     }
 }
+
+//.style2classrc.js
+module.exports = {
+    entry: [],
+    styleObjectName(filePath) {
+        return filePath.slice(-5)
+    }
+    ...
+}
+```
 
 ## 执行 
 yarn run 
