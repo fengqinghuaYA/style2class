@@ -2,25 +2,26 @@
 
 ## usage
 
-### 安装 
+### 安装
 
-yarn add @mf/style2class 
+yarn add @mf/style2class
 
 ### 配置
 
-#### options 
+#### options
 
-
-| option                | Description                                                   | type | 
-| -----------           | ----------- | ----- |
-| entry                 | 入口文件 详见：https://www.npmjs.com/package/fast-glob         |
-| computed              | 是否以style['XXX']                                            |boolean |
-| computedEntry         | 将 style['XXX'] 转换为 style.XXX 的入口文件;                    |入口文件
-| styleObjectName       | style 对象的名称       |string OR (filepath)=>string           |
-| cssProcessors         |  支持的预编译语言   'css' ， 'less' ， 'scss' ， 'sass'         | string[]|
-| prettierConfig        |  prettier 配置文件路径，用于格式化代码                           | string |
+| option          | Description                                              | type                           |
+| --------------- | -------------------------------------------------------- | ------------------------------ |
+| jsxPropertyName | 需要转换为className的jsx属性                             | "style" , "styleName"(default) |
+| entry           | 入口文件 详见：<https://www.npmjs.com/package/fast-glob> | 入口文件                       |
+| computed        | 是否以style['XXX']                                       | boolean                        |
+| computedEntry   | 将 style['XXX'] 转换为 style.XXX 的入口文件;             | 入口文件                       |
+| styleObjectName | style 对象的名称                                         | string OR (filepath)=>string   |
+| cssProcessors   | 支持的预编译语言   'css' ， 'less' ， 'scss' ， 'sass'   | string[]                       |
+| prettierConfig  | prettier 配置文件路径，用于格式化代码                    | string                         |
 
 #### 在package.json或者.style2classrc.js中添加配置
+
 ```js
 // package.json 
 {
@@ -41,7 +42,8 @@ module.exports = {
 }
 ```
 
-#### 执行 
+#### 执行
+
 ```js
 "scripts":{
     ...
@@ -49,10 +51,11 @@ module.exports = {
     "remove": "style2class remove"
 }
 ```
-yarn sty2cls 
 
+yarn sty2cls
 
 ### 效果
+
 ```js
 
 //------origin code
