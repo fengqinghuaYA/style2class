@@ -13,8 +13,8 @@ let configRc = null;
 if (fs.existsSync(path.join(process.cwd(), 'package.json'))) {
     configPkg = require(path.join(process.cwd(), 'package.json'))['style2class'];
 }
-if (fs.existsSync(path.join(process.cwd(), '.style2classrc'))) {
-    configRc = require(path.join(process.cwd(), '.style2classrc'));
+if (fs.existsSync(path.join(process.cwd(), '.style2classrc.js'))) {
+    configRc = require(path.join(process.cwd(), '.style2classrc.js'));
 }
 const command = argv['_'][0];
 
