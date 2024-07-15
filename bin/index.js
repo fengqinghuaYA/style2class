@@ -5,12 +5,20 @@ const path = require('path');
 const style2class = require('../lib/stl2cls');
 const removeComputed = require('../lib/removeComputed');
 const config$ = require('../lib/config');
+const fs = require('fs');
 
-const configPkg = require(path.join(process.cwd(), 'package.json'))['style2class'];
-const configRc = require(path.join(process.cwd(), '.style2classrc'));
+
+let configPkg = null;
+let configRc = null;
+if (fs.existsSync(path.join(process.cwd(), 'package.json'))) {
+    configPkg = require(path.join(process.cwd(), 'package.json'))['style2class'];
+}
+if (fs.existsSync(path.join(process.cwd(), '.style2classrc'))) {
+    configRc = require(path.join(process.cwd(), '.style2classrc'));
+}
 const command = argv['_'][0];
 
-const config = configPkg ?? configRc ?? {};
+const config = configRc ?? configPkg ?? {};
 
 config$.setConfig(config);
 
